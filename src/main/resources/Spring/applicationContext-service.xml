@@ -10,27 +10,6 @@
 	http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
 
 
-	<!--配置数据源 -->
-	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
-		<property name="user" value="root"></property>
-		<property name="password" value="root"></property>
-		<property name="jdbcUrl" value="jdbc:mysql:///mybatis"></property>
-		<property name="driverClass" value="com.mysql.jdbc.Driver"></property>
-	</bean>
-
-	<!--配置sqlSessionFactory 让Spring管理系统的Mybatis -->
-	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-		<property name="dataSource" ref="dataSource"></property>
-		<property name="configLocation" value="classpath:mybatis/sqlMapConfig.xml"></property>
-		<property name="typeAliasesPackage" value="com.kekemile.po"></property>
-	</bean>
-
-
-	<!-- 配置自动的Mapper扫描 -->
-	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.kekemile.dao"></property>
-		<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
-	</bean>
-
+	<bean id="UserService" class="com.kekemile.service.impl.UserServiceImpl"></bean>
 
 </beans>
