@@ -101,7 +101,13 @@
 			<artifactId>mybatis-spring</artifactId>
 			<version>1.2.2</version>
 		</dependency>
-
+		
+		<dependency>
+			<groupId>c3p0</groupId>
+			<artifactId>c3p0</artifactId>
+			<version>0.9.1</version>
+		</dependency>
+		
 		<dependency>
 			<groupId>Mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
